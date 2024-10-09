@@ -1,5 +1,5 @@
 WLECOME 😀😀😀😀
-Getting Start With THe game Here is the Link :  
+Getting Start With THe game Here is the Link :  https://ganeshvattikulla.github.io/Matrix-Color-Predictor/
 
 # Color Bet Game
 
