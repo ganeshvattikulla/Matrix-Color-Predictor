@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#141414, #3eac91, #141414);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.head img {
+    width: 110px;
+    height: 135px;
+    position: relative;
+    left: 18px;
+}
+
+.head h1 {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.head a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.head a h6 {
+    font-size: 1.5em;
+    position: relative;
+    right: 10px;
+}
+
+.main {
+    display: flex;
+    width: auto;
+    height: 80vh;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 65%;
+    height: inherit;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: inherit;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    gap: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 90%;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.result {
+    width: 70%;
+    height: 70%;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    /* Adjust the gap as needed */
+    padding: 10px;
+}
+
+.result-info {
+    width: 90%;
+    height: 30%;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    /* display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px; Adjust the gap as needed */
+    padding: 10px;
+}
+
+.result span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 40px;
+    line-height: 1;
+    font-size: 3em;
+}
+
+.inputTimer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+    gap: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 15%;
+    background-color: rgba(68, 63, 1, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 3em;
+}
+
+.input {
+    width: 95%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(62, 172, 145, 0.1);
+    border-radius: 40px;
+}
+
+.lineBet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+span {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#placeBet {
+    display: none;
+}
+
+.placeBet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.placeBet input {
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.placeBet input::placeholder {
+    text-align: center;
+}
+
+#placeBet button {
+    border: 2px solid transparent;
+    /* Initial border */
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.placeBet button:hover {
+    border-color: #141414;
+    /* Border color on hover */
+    border-radius: 10px;
+    /* Rounded corners */
+    background: var(--cls);
+    /* Background color */
+    box-shadow: 5px 1px 5px var(--cls), -5px -1px 5px var(--cls);
+    /* Shadow */
+}
+
+#colorBet {
+    display: none;
+}
+
+.colorBet {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.colorBet button {
+    border: none;
+    width: 65px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    background-color: var(--cls);
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.colorBet button:hover {
+    border-radius: 52px;
+    background: var(--cls);
+    box-shadow: 5px 1px 5px var(--cls), -5px -1px 5px var(--cls);
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+#deposit {
+    display: none;
+}
+
+.deposit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.deposit input {
+    width: 60%;
+    height: 20px;
+    border-radius: 10px;
+    padding: 20px 40px;
+    border: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.deposit input::placeholder {
+    text-align: center;
+}
+
+#deposit button {
+    border: 2px solid transparent;
+    /* Initial border */
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deposit button:hover {
+    border-color: #141414;
+    /* Border color on hover */
+    border-radius: 10px;
+    /* Rounded corners */
+    background: var(--cls);
+    /* Background color */
+    box-shadow: 5px 1px 5px var(--cls), -5px -1px 5px var(--cls);
+    /* Shadow */
+}
+
+#AddSub {
+    border: 2px solid transparent;
+    /* Initial border */
+
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#AddSub:hover {
+    border-color: #141414;
+    /* Border color on hover */
+    border-radius: 10px;
+    /* Rounded corners */
+    background: var(--cls);
+    /* Background color */
+    box-shadow: 5px 1px 5px var(--cls), -5px -1px 5px var(--cls);
+}
+
+.blnAddbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#sec3 {
+    position: absolute;
+    display: none;
+    margin-top: -80px;
+    overflow: hidden;
+    background: #f9d423;
+}
+
+.gameRls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #c9ffbf, #ffafbd);
+    /* Fixed spelling */
+    width: 50vw;
+    height: 80vh;
+    overflow: hidden;
+    padding: 50px;
+}
+
+.gameRls ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.gameRls ul li {
+    font-size: 1rem;
+}
+
+#cross {
+    position: absolute;
+    font-size: 2rem;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+#cross:hover {
+    background: linear-gradient(45deg,
+            #ff4e50,
+            #f9d423);
+    /* Define the gradient */
+    -webkit-background-clip: text;
+    /* Clip the background to the text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text color transparent */
+    background-clip: text;
+    /* For other browsers */
+}
+
+.result-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

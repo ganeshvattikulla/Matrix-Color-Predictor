@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Matrix</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="head">
+        <img src="./assets/the-matrix-logo.png" alt="" srcset="" />
+        <h1 style="color: orangered">Welcome To The Matrix Color Game</h1>
+
+        <a href="#sec3" id="rules">
+            <h6>About Game</h6>
+        </a>
+    </header>
+
+    <main class="main">
+        <section class="sec1">
+            <!-- matrix result  -->
+            <div class="container">
+                <div class="result" id="result"></div>
+                <div class="result-info" id="ResultInfo"></div>
+            </div>
+
+            <div class="inputTimer">
+                <div class="timer" id="timer">
+                    <!-- timer  -->
+                </div>
+                <div class="input">
+                    <div class="lineBet">
+                        <span>Enter number of Vertical lines wanna bet:</span>
+                        <div id="mySelect">
+                            <label>
+                                <input type="radio" name="betLines" value="1" /> One
+                            </label>
+                            <label>
+                                <input type="radio" name="betLines" value="2" /> Two
+                            </label>
+                            <label>
+                                <input type="radio" name="betLines" value="3" /> Three
+                            </label>
+                        </div>
+                        <p id="selectedValue"></p>
+                    </div>
+
+                    <div id="colorBet">
+                        <span>Guess the color </span>
+                        <div class="colorBet">
+                            <button id="clrBtn" style="--cls: #ff0000" value="R">
+                                Red
+                            </button>
+                            <button id="clrBtn" style="--cls: #ffff00" value="Y">
+                                Yellow
+                            </button>
+                            <button id="clrBtn" style="--cls: #0000ff" value="B">
+                                Blue
+                            </button>
+                            <button id="clrBtn" style="--cls: #ffa500" value="O">
+                                Orange
+                            </button>
+                        </div>
+                        <div id="show"></div>
+                    </div>
+
+                    <div id="placeBet">
+                        <div class="placeBet">
+                            <span>Enter bet amount on a single line</span>
+                            <input type="text" id="bettingAmountOnLine" placeholder="Amount" />
+                            <button id="playBtn" style="--cls: rgba(255, 255, 255, 0.5)">
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2">
+            <!-- balance and info -->
+            <div class="blnAddbtn">
+                <div class="balance" id="balance"></div>
+                <div><button id="AddSub">Add Funds</button></div>
+            </div>
+            <div>
+                <div id="deposit">
+                    <div class="deposit">
+                        <span>Enter Deposit amount :</span>
+                        <input type="text" id="depositAmount" placeholder="Amount" />
+                        <button id="dSub">Deposit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec3">
+            <div class="gameRls">
+                <ul>
+                    <li>
+                        <strong>Starting Balance:</strong> You begin with
+                        <strong>$30</strong>.
+                    </li>
+                    <li>
+                        <strong>Select a Color:</strong> Choose one of the colors to bet
+                        on: Red (R), Blue (B), Yellow (Y), or Orange (O).
+                    </li>
+                    <li>
+                        <strong>Place Your Bet:</strong> Enter your desired betting amount
+                        in the "Betting Amount" box and click the "Place Bet" button.
+                    </li>
+                    <li>
+                        <strong>Wait for the Next Round:</strong> A countdown timer will
+                        show how much time is left until the next round starts. Betting is
+                        closed during the last 2 seconds of the countdown.
+                    </li>
+                    <li>
+                        <strong>Watch the Timer</strong> After the countdown, the
+                        game will generate a <strong>3x3 grid</strong> of symbols.
+                    </li>
+                    <li>
+                        <strong>Check for Wins:</strong> If there are any complete Column of
+                        the color you chose, you win!
+                    </li>
+                    <li>
+                        <strong>Winnings:</strong> For each matching Column, you earn
+                        <strong>double</strong> your betting amount and based on lines you Selected. Your balance will
+                        automatically update after each round.
+                    </li>
+                    <li>
+                        <strong>Deposit More Funds:</strong> If you want to add more money
+                        to your balance, click the "Deposit" button and enter the amount.
+                    </li>
+                    <li>
+                        <strong>Play Again:</strong> After the results are shown, you can
+                        place a new bet for the next round!
+                    </li>
+                    <li><strong>Have Fun!</strong> Enjoy the game and good luck!</li>
+                </ul>
+            </div>
+
+            <div id="cross">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+        </section>
+    </main>
+
+    <footer>&copy;Ganesh and sandeep</footer>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
